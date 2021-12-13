@@ -1,11 +1,11 @@
-n = [6,4,24,6,3,63, 63]
-n = set(n)
-n.discard(max(n))
-print(max(n))
+def wrap(string, max_width):
+    count = 0
+    s = ''
+    while count < len(string):
+        s += string[count:count+max_width] + '\n'
+        count += max_width
+    return s
 
-x = {5,}
-print(min(x))
 
-b = [1, 2, 3]
-b = tuple(b)
-print(hash(b))
+
+print(wrap('ABCDEFGHIJKLIMNOQRSTUVWXYZ', 10))
