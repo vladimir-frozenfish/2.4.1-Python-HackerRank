@@ -1,4 +1,5 @@
 def solve(s):
+
     space = True
     full_name = ''
     for i in s:
@@ -14,7 +15,7 @@ def solve(s):
 
 
     """
-    s = s.split()
+    s = s.split(' ')
     full_name = ' '.join([i[0].upper() + i[1:].lower() for i in s])
     """
 
@@ -30,3 +31,4 @@ def solve(s):
 
 solve('vLaD kArpoVicH sdP 1 2fg')
 solve(' hello   world    lol')
+
