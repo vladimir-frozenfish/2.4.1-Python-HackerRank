@@ -1,12 +1,22 @@
-from collections import defaultdict
+import calendar
 
-d = defaultdict(list)
-d['python'].append("awesome")
-d['something-else'].append("not relevant")
-d['python'].append("language")
+'''
+print(calendar.TextCalendar(firstweekday=7).formatyear(2022))
+print(calendar.weekday(2022, 4, 8))
+print(calendar.weekheader(10))
+'''
 
-for i in d.items():
-    print(i)
+MM, DD, YYYY = list(map(int, input().split()))
 
-print(d['python'])
-print(d)
+day_week = {
+    0: 'MONDAY',
+    1: 'TUESDAY',
+    2: 'WEDNESDAY',
+    3: 'THURSDAY',
+    4: 'FRIDAY',
+    5: 'SATURDAY',
+    6: 'SUNDAY',
+}
+
+print(day_week[calendar.weekday(YYYY, MM, DD)])
+
